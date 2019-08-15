@@ -47,6 +47,34 @@ export const treeEntryToNodeTree = (tree: Entry[], defaultState?: { [stateKey: s
     return nodes; //If there is no root element
 }
 
+const isExpanded = (node: Node) => node.state ? node.state.expanded : false;
+
+export const getExpandedTree = (nodes: Node[]) => {
+    // filter the nodes to only the expanded ones
+    return nodes.map(node => {
+        // if expanded get children then recall this function
+        let newNode = Object.assign({}, node); // Deep copy
+        if (isExpanded(newNode)) {
+            if (newNode.children) {
+                newNode.children = getExpandedTree(newNode.children);
+            }
+        } else {
+            newNode.children = [];
+        }
+        return newNode;
+    });
+}
+
+export const getFlatTree = (nodes: Node[]) => {
+    let flatTree: Node[] = [];
+    nodes.forEach((node) => {
+        flatTree.push(node);
+        if(node.children){
+            flatTree.push(...getFlatTree(node.children));
+        }
+    });
+    return flatTree;
+}
 
 export const SELECT = 3;
 

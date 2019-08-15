@@ -7943,6 +7943,11 @@ react-resizable@1.x:
     prop-types "15.x"
     react-draggable "^2.2.6 || ^3.0.3"
 
+react-scroll-sync@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/react-scroll-sync/-/react-scroll-sync-0.7.0.tgz#935387b2b877dcc7032ad9410155b0b7d7951048"
+  integrity sha512-PL4MWceh596EA+z5zLPYYB7HfctjShh+XTOZ5FgZnxwA66g1Fnx0kK0DMjma23cqlhXBvYLA7Fnp67afzBwdHA==
+
 react-virtualized-tree@^3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/react-virtualized-tree/-/react-virtualized-tree-3.2.3.tgz#94b2f023fc04984aecacb091687628c84b5116cc"
