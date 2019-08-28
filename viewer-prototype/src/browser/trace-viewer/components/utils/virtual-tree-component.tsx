@@ -41,7 +41,10 @@ export const treeEntryToNodeTree = (tree: Entry[], defaultState?: { [stateKey: s
     //Only return root element
     const isRoot = ({ id }: Node) => rootIds.includes(id);
     const rootNodes = nodes.filter(isRoot)
-    if (rootNodes.length) {
+    if (rootNodes.length === 1) {
+        return rootNodes[0].children as Node[];
+    }
+    else if (rootNodes.length) {
         return rootNodes;
     }
     return nodes; //If there is no root element

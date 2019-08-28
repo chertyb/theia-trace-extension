@@ -20,7 +20,6 @@ import { TspDataProvider } from './data-providers/tsp-data-provider';
 import { ReactTimeGraphContainer } from "./utils/timegraph-container-component";
 import { treeEntryToNodeTree, getExpandedTree } from './utils/virtual-tree-component';
 import { ganttTimeGraphChart } from './gantt-time-graph-chart';
-import { ScrollSync } from 'react-virtualized';
 
 const {Expandable} = renderers;
 
